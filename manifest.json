@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Placement Autofill",
+  "version": "1.0",
+  "description": "Save candidate details and autofill Google Forms (label-based).",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://docs.google.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://docs.google.com/forms/*",
+        "https://docs.google.com/forms/d/e/*/viewform*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "48": "icon.png"
+  }
+}
