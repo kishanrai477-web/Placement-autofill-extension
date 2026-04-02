@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Placement Autofill</title>
+  <style>
+    body { font-family: Arial, sans-serif; width: 340px; margin: 10px; }
+    label { font-size: 13px; font-weight: 500; display:block; margin-top:6px; }
+    input, select { width: 100%; box-sizing: border-box; margin: 3px 0 8px; padding: 6px; }
+    .radio-group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 5px 0 10px;
+}
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+}
+    .inline-group { margin: 5px 0 10px; }
+    .inline-group label { display:inline; margin-right:10px; }
+    button { margin: 6px 6px 0 0; padding: 6px 10px; }
+    #status { font-size: 12px; color: green; margin-top: 6px; }
+  </style>
+</head>
+<body>
+  <form id="userForm">
+    <label>University Roll No</label>
+    <input id="rollno" type="text" />
+
+    <label>Student Full Name</label>
+    <input id="name" type="text" />
+
+    <label>Gender</label>
+    <div class="radio-group">
+      <label><input type="radio" name="gender" value="Male"> Male</label>
+      <label><input type="radio" name="gender" value="Female"> Female</label>
+    </div>
+
+    <label>College Name</label>
+    <select id="college">
+      <option value="">Select</option>
+      <option value="Chandigarh University">Chandigarh University</option>
+      <option value="Chandigarh Group of Colleges">Chandigarh Group of Colleges</option>
+    </select>
+
+    <label>Course</label>
+    <select id="course">
+      <option value="B.E/B.Tech">B.E/B.Tech</option>
+    </select>
+
+    <label>Stream</label>
+    <input id="stream" type="text" />
+
+    <label>10th %</label>
+    <input id="tenth" type="text" />
+
+    <label>12th %</label>
+    <input id="twelfth" type="text" />
+
+    <label>Graduation %</label>
+    <input id="grad" type="text" />
+
+    <label>Active Backlogs</label>
+    <div class="radio-group">
+      <label><input type="radio" name="backlog" value="Yes"> Yes</label>
+      <label><input type="radio" name="backlog" value="No"> No</label>
+    </div>
+
+    <label>Primary Mobile Number</label>
+    <input id="primaryPhone" type="tel" />
+
+    <label>Alternate Mobile Number</label>
+    <input id="altPhone" type="tel" />
+
+    <label>Personal Email ID (not college domain)</label>
+    <input id="personalEmail" type="email" />
+
+    <label>College Domain Email ID</label>
+    <input id="collegeEmail" type="email" />
+
+    <button id="saveBtn" type="submit">Save</button>
+    <button id="autofillBtn" type="button">Autofill</button>
+    <div id="status"></div>
+  </form>
+  <script src="popup.js"></script>
+</body>
+</html>
