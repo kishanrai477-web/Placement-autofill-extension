@@ -33,27 +33,27 @@ The extension follows Chrome's standard Manifest V3 architecture, separating con
 +-----------------------------------------------------------------+
 |                        popup.html/js                            |
 |              (User Interface — data entry layer)                |
-|                                                                   |
+|                                                                 |
 |   - Collects and validates user profile fields                  |
 |   - Reads/writes data via chrome.storage.local                  |
-|   - Sends "AUTOFILL_TRIGGER" message on user action              |
-+-----------------------------+-------------------------------------+
+|   - Sends "AUTOFILL_TRIGGER" message on user action             |
++-----------------------------+------------------------------------+
                               | chrome.runtime messaging
                               v
 +-----------------------------------------------------------------+
 |                        content.js                                |
 |           (Injected into the active job/form page)               |
-|                                                                   |
-|   - Scans DOM for <input>, <textarea>, <select> elements          |
-|   - Matches fields using label/placeholder/name heuristics        |
-|   - Dispatches native input/change events for form validation     |
-+-----------------------------+-------------------------------------+
+|                                                                  |
+|   - Scans DOM for <input>, <textarea>, <select> elements         |
+|   - Matches fields using label/placeholder/name heuristics       |
+|   - Dispatches native input/change events for form validation    |
++-----------------------------+------------------------------------+
                               |
                               v
 +-----------------------------------------------------------------+
 |                       manifest.json                              |
-|        Declares permissions, content scripts, and the             |
-|        extension's entry points to the browser runtime             |
+|        Declares permissions, content scripts, and the            |
+|        extension's entry points to the browser runtime           |
 +-----------------------------------------------------------------+
 
 Project Structure
