@@ -1,5 +1,4 @@
 Placement Autofill — Chrome Extension
-<img width="790" height="506" alt="image" src="https://github.com/user-attachments/assets/f1f9ed5f-68fe-4482-b2ef-f27aec1139d8" />
 
 
 A lightweight browser extension that eliminates repetitive form-filling during job and internship application season.
@@ -44,16 +43,16 @@ The extension follows Chrome's standard Manifest V3 architecture, separating con
 |                        content.js                                |
 |           (Injected into the active job/form page)               |
 |                                                                  |
-|   - Scans DOM for <input>, <textarea>, <select> elements         |
+|   - Scans DOM for input, textarea, and select elements           |
 |   - Matches fields using label/placeholder/name heuristics       |
 |   - Dispatches native input/change events for form validation    |
-+-----------------------------+------------------------------------+
++-----------------------------+-------------------------------------+
                               |
                               v
 +-----------------------------------------------------------------+
-|                       manifest.json                              |
-|        Declares permissions, content scripts, and the            |
-|        extension's entry points to the browser runtime           |
+|                       manifest.json                             |
+|        Declares permissions, content scripts, and the           |
+|        extension's entry points to the browser runtime          |
 +-----------------------------------------------------------------+
 
 Project Structure
@@ -96,6 +95,12 @@ Click the extension icon in the toolbar
 Enter (or confirm previously saved) personal details
 Click Autofill
 Matching fields are populated automatically — review before submitting
+
+
+
+Screenshots
+
+Popup UIAutofill in ActionShow ImageShow Image
 
 
 Roadmap
@@ -145,4 +150,4 @@ This project is licensed under the MIT License.
 
 Support
 
-If this project saves you time, consider giving it a star on GitHub — it helps others discover it.
+If this project saves you time, consider giving it a star on GitHub — it helps others discover it
